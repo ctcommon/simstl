@@ -10,8 +10,6 @@ STL的空间配置器：主要分为二级
 
 主要函数有allocate、deallocate、set_malloc_handler（类似C++的new-handler机制）。
 
-内存基本处理工具
-
 迭代器概念与traits编程技法：iterator模式就是在不破坏容器封装性的前提下，依序遍历容器中的各个元素，也可以说是一种只能指针，因此最重要的就是对operaotr*和operator->的重载。迭代器分为5种，只读，只写，前向，双向和随机迭代器
 
 traits的用法在于，若是一个函数，它的参数是迭代器I，然而函数返回类型却是迭代器的对象，这无法使用一般的template推导机制（只能用于函数参数进行推导），顶多只能返回迭代器I类型，却返回不了迭代器所指的对象的类型，因此运用triats技巧实现。具体做法是在迭代器里进行typedef操作，将迭代器所指的类型声明为value_type内嵌迭代器，然后使用typename typedef I::value_type作为函数的返回类型。
