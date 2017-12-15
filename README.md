@@ -1,10 +1,7 @@
 # simstl
-create a simple stl
-
+create a simple stl]\n
 目前工作进展
-
 STL的空间配置器：主要分为二级
-
 第一级配置器直接使用malloc()和free()。同时也仿造C++的new的new-handler机制，如果申请空间无法满足需求，会在抛出异常之前调用特定的处理函数
 不断的尝试释放内存，然后配置。
 
