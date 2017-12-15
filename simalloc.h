@@ -9,7 +9,7 @@
 #       define __THROW_BAD_ALLOC std::cerr << "out of memory" << std::endl; exit(1)
 #endif
 
-namespace MiniSTL {
+namespace SimiSTL {
 
 
 //第一级配置器
